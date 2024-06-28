@@ -48,7 +48,7 @@ export const patchStatement = async (req,res) =>{
 
 export const delStatementId = async (req,res) => {
     try {
-        const deleteDataId = await StatementModel.findByIdAndDelete(req.body.id);
+        const deleteDataId = await StatementModel.findByIdAndDelete(req.params.id);
         res.json(deleteDataId);
     } catch (error) {
         console.log(error)
